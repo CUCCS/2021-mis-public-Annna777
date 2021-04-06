@@ -30,18 +30,21 @@
 1. 手动下载文件`openwrt-19.07.5-x86-64-combined-squashfs.img.gz`
 
 2. 用git bash进行解压缩
+
 ```gunzip openwrt-x86-64-combined-squashfs.img.gz```
 
 3. 将img 格式转换为 Virtualbox 虚拟硬盘格式 vdi并扩容
 
 * 转换
 
-```VBoxManage convertfromraw --format VDI openwrt-x86-64-combined-squashfs.img openwrt-x86-64-combined-squashfs.vdi
+```
+VBoxManage convertfromraw --format VDI openwrt-x86-64-combined-squashfs.img openwrt-x86-64-combined-squashfs.vdi
 ```
 
 * 转换过程中报错，按照bash中提示信息执行dd命令
 
-```dd if=openwrt-19.07.5-x86-64-combined-squashfs.img of=openwrt-19.07.5-x86-64-combined-squashfs-padded.img bs=128000 conv=sync
+```
+dd if=openwrt-19.07.5-x86-64-combined-squashfs.img of=openwrt-19.07.5-x86-64-combined-squashfs-padded.img bs=128000 conv=sync
 ```
 
 * 虚拟磁盘扩容
@@ -126,7 +129,7 @@ opkg files luci-mod-admin-full
 
 ```opkg update && opkg install usbutils```
 
-![](img/安装usbtils.png)
+![](img/安装usbutils.png)
 
 2. 安装好 usbutils 之后，通过以下 2 个步骤可以确定该无线网卡的驱动是否已经安装好。
 
@@ -185,5 +188,7 @@ opkg install kmod-ath9k-htc
 ### 参考资料
 
 [移动互联网安全第一章实验](https://c4pr1c3.github.io/cuc-mis/chap0x01/exp.html)
+
 [AlinaZxy的第一章实验报告](github.com/CUCCS/2021-mis-public-AlinaZxy/blob/Chap01/chap01/chap01.md)
+
 [shiancuc的第一章实验报告](https://github.com/CUCCS/2021-mis-public-shiancuc/blob/mis_chap0x01/chap0x01/mis_chap0x01_report.md)
