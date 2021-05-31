@@ -149,7 +149,7 @@ response = requests.post('http://192.168.56.123/cgi-bin/luci', headers=headers, 
 
 ![](img/ifconfig.png)
 
-6. 在命令行中执行`python exp.py id` 并使用网页访问http://192.168.56.123/cmd.txt ，漏洞已经实现
+6. 在命令行中执行`python exp.py id` 并使用网页访问`http://192.168.56.123/cmd.txt` ，漏洞已经实现
 
 ![](img/id.png)
 
